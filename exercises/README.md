@@ -3,7 +3,7 @@
 <!-- END TITLE -->
 
 <!-- BEGIN TOC -->
-> 7/3/2020, 3:35:30 PM
+> 7/10/2020, 15:21:38
 
 - [0-hello-world](#0-hello-world)
 - [1-remove-from-array](#1-remove-from-array)
@@ -39,23 +39,16 @@ A very simple function, it greets whatever you tell it to
 
 **Example**  
 ```js
-const greeting = hello('World');
-console.log(greeting); // 'Hello, World!'
+const greeting = hello('World');console.log(greeting); // 'Hello, World!'
 ```
 **Test Report**
 ```
 Started
-.F..F.
+......
 
-Failures:
-1) Hello says hello world
-.    Expected '' to equal 'Hello, World!'..
 
-2) Hello says hello toys
-.    Expected '' to equal 'Hello, toys!'..
-
-2 specs, 2 failures
-Finished in 0.009 seconds
+2 specs, 0 failures
+Finished in 0.018 seconds
 
 ```
 
@@ -68,37 +61,29 @@ Finished in 0.009 seconds
 
 <a name="removeFromArray"></a>
 
-## removeFromArray()
+## removeFromArray(arr, ...items) ⇒ <code>Array</code>
+A function that takes an array and some other arguments then removes the other arguments fromthat array
 
+
+**Returns**: <code>Array</code> - - the filtered list of values  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> | the list of values to check |
+| ...items | <code>object</code> | the list of items to filter |
+
+**Example**  
+```js
+const filterList = removeFromArray([1, 2, 3, 4], 3, "tacos");console.log(filterList); // [1,2,4]
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F.
+.....................
 
-Failures:
-1) removeFromArray removes a single value
-.    Expected undefined to equal [ 1, 2, 4 ]..
 
-2) removeFromArray removes multiple values
-.    Expected undefined to equal [ 1, 4 ]..
-
-3) removeFromArray ignores non present values
-.    Expected undefined to equal [ 1, 2, 3, 4 ]..
-
-4) removeFromArray ignores non present values, but still works
-.    Expected undefined to equal [ 1, 3, 4 ]..
-
-5) removeFromArray can remove all values
-.    Expected undefined to equal [  ]..
-
-6) removeFromArray works with strings
-.    Expected undefined to equal [ 2, 'ho' ]..
-
-7) removeFromArray only removes same type
-.    Expected undefined to equal [ 1, 2 ]..
-
-7 specs, 7 failures
-Finished in 0.008 seconds
+7 specs, 0 failures
+Finished in 0.019 seconds
 
 ```
 
@@ -111,37 +96,29 @@ Finished in 0.008 seconds
 
 <a name="repeatString"></a>
 
-## repeatString()
+## repeatString(str, nr) ⇒ <code>String</code>
+A function that simply repeats the string a given number of times
 
+
+**Returns**: <code>String</code> - - user's input repeated number of times  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>String</code> | user's input to be repeated |
+| nr | <code>Number</code> | the number of times it will be repeated |
+
+**Example**  
+```js
+const repeatString = repeatString('hey', 10);console.log(repeatString); // 'heyheyheyheyheyheyheyheyheyhey' 
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F.
+.....................
 
-Failures:
-1) repeatString repeats the string
-.    Expected undefined to equal 'heyheyhey'..
 
-2) repeatString repeats the string many times
-.    Expected undefined to equal 'heyheyheyheyheyheyheyheyheyhey'..
-
-3) repeatString repeats the string 1 times
-.    Expected undefined to equal 'hey'..
-
-4) repeatString repeats the string 0 times
-.    Expected undefined to equal ''..
-
-5) repeatString returns ERROR with negative numbers
-.    Expected undefined to equal 'ERROR'..
-
-6) repeatString repeats the string a random amount of times
-.    TypeError: Cannot read property 'match' of undefined.
-
-7) repeatString works with blank strings
-.    Expected undefined to equal ''..
-
-7 specs, 7 failures
-Finished in 0.007 seconds
+7 specs, 0 failures
+Finished in 0.017 seconds
 
 ```
 
@@ -154,28 +131,28 @@ Finished in 0.007 seconds
 
 <a name="reverseString"></a>
 
-## reverseString()
+## reverseString(str) ⇒ <code>String</code>
+A function called `reverseString` that returns its input, reversed
 
+
+**Returns**: <code>String</code> - - reversed user's input  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>String</code> | user's input to be reversed |
+
+**Example**  
+```js
+const revString = reverseString('hello there');console.log(revString); // 'ereht olleh' 
+```
 **Test Report**
 ```
 Started
-.F..F..F..F.
+............
 
-Failures:
-1) reverseString reverses single word
-.    Expected undefined to equal 'olleh'..
 
-2) reverseString reverses multiple words
-.    Expected undefined to equal 'ereht olleh'..
-
-3) reverseString works with numbers and punctuation
-.    Expected undefined to equal '!cba !321'..
-
-4) reverseString works with blank strings
-.    Expected undefined to equal ''..
-
-4 specs, 4 failures
-Finished in 0.003 seconds
+4 specs, 0 failures
+Finished in 0.008 seconds
 
 ```
 
@@ -188,34 +165,30 @@ Finished in 0.003 seconds
 
 <a name="sumAll"></a>
 
-## sumAll()
+## sumAll(nr1, nr2) ⇒ <code>Number</code>
+A function that takes 2 integers and returns the sum of every number between(and including) them
 
+
+**Returns**: <code>Number</code> - - summary of all the numbers between this number, including numbers that were input  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| nr1 | <code>Number</code> | number 1, user's input |
+| nr2 | <code>Number</code> | number 2, user's input |
+
+**Example**  
+```js
+const sum = sumAll(1, 4000);console.log(sum); // 8002000 
+```
 **Test Report**
 ```
+.[33m10.[39m
 Started
-.F..F..F..F..F..F.
+..................
 
-Failures:
-1) sumAll sums numbers within the range
-.    Expected undefined to equal 10..
 
-2) sumAll works with large numbers
-.    Expected undefined to equal 8002000..
-
-3) sumAll works with larger number first
-.    Expected undefined to equal 7626..
-
-4) sumAll returns ERROR with negative numbers
-.    Expected undefined to equal 'ERROR'..
-
-5) sumAll returns ERROR with non-number parameters
-.    Expected undefined to equal 'ERROR'..
-
-6) sumAll returns ERROR with non-number parameters
-.    Expected undefined to equal 'ERROR'..
-
-6 specs, 6 failures
-Finished in 0.005 seconds
+6 specs, 0 failures
+Finished in 0.014 seconds
 
 ```
 
@@ -228,43 +201,28 @@ Finished in 0.005 seconds
 
 <a name="fibonacci"></a>
 
-## fibonacci()
+## fibonacci(nr) ⇒ <code>Number</code>
+A function that returns a specific member of the fibonacci sequence
 
+
+**Returns**: <code>Number</code> - - the number of the fibonacci sequence  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| nr | <code>Number</code> | the position of the number in the fibonacci sequence |
+
+**Example**  
+```js
+const num = fibonacci(25);console.log(num); // 75025
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F..F..F.
+...........................
 
-Failures:
-1) fibonacci works
-.    Expected undefined to equal 3..
 
-2) fibonacci works
-.    Expected undefined to equal 8..
-
-3) fibonacci works
-.    Expected undefined to equal 55..
-
-4) fibonacci works
-.    Expected undefined to equal 610..
-
-5) fibonacci works
-.    Expected undefined to equal 75025..
-
-6) fibonacci doesn't accept negatives
-.    Expected undefined to equal 'OOPS'..
-
-7) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-8) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-9) fibonacci DOES accept strings
-.    Expected undefined to equal 21..
-
-9 specs, 9 failures
-Finished in 0.008 seconds
+9 specs, 0 failures
+Finished in 0.019 seconds
 
 ```
 
@@ -289,7 +247,7 @@ Failures:
 .    Expected undefined to equal [ 'Book', 'Book2' ]..
 
 1 spec, 1 failure
-Finished in 0.001 seconds
+Finished in 0.007 seconds
 
 ```
 
@@ -329,7 +287,7 @@ Failures:
 .    Expected undefined to equal false..
 
 6 specs, 6 failures
-Finished in 0.005 seconds
+Finished in 0.025 seconds
 
 ```
 
@@ -366,7 +324,7 @@ Failures:
 .    Expected undefined to equal false..
 
 5 specs, 5 failures
-Finished in 0.005 seconds
+Finished in 0.018 seconds
 
 ```
 
@@ -409,7 +367,7 @@ Failures:
 .    Expected undefined to equal 'Ebiil, Tloia!'..
 
 7 specs, 7 failures
-Finished in 0.006 seconds
+Finished in 0.036 seconds
 
 ```
 
@@ -440,7 +398,7 @@ Failures:
 .    TypeError: Cannot read property 'name' of undefined.
 
 3 specs, 3 failures
-Finished in 0.003 seconds
+Finished in 0.018 seconds
 
 ```
 
@@ -489,7 +447,7 @@ Failures:
 .    Expected undefined to equal 'ethay ickquay ownbray oxfay'..
 
 9 specs, 9 failures
-Finished in 0.007 seconds
+Finished in 0.024 seconds
 
 ```
 
@@ -529,7 +487,7 @@ Failures:
 .    Expected undefined to equal 'snake_case_is_awesome'..
 
 6 specs, 6 failures
-Finished in 0.005 seconds
+Finished in 0.015 seconds
 
 ```
 
